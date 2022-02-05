@@ -41,7 +41,7 @@ def lenMap():
     """
     global lenMap
     mapFile=open("map.txt","r",1)
-    print(mapFile.readline()) #test# print the map
+    #print(mapFile.readline()) #test# print the map
     mapFile.seek(0) #reset cursor position
     lenMap=len(mapFile.read())
     #print(lenMap)
