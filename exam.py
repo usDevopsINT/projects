@@ -1,3 +1,4 @@
+#-----posts-----
 import json
 
 import requests
@@ -31,3 +32,21 @@ user_input=input("please type the post ID:")
 post=getPost()
 post=findPost(user_input,post)
 print(post)
+
+#-----shape-----
+class Shape:
+    def __init__(self,area,helef):
+        self.__area=area
+        self.__helef=helef
+    def __str__(self):
+        return ""
+
+    @property
+    def shapes(self):
+        return self.__shapes
+
+    @shapes.setter
+    def shapes(self,s):
+        #if...
+        self.__shapes=s
+
