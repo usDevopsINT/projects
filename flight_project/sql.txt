@@ -1,0 +1,37 @@
+users_table = \
+    """CREATE TABLE IF NOT EXISTS "users" (
+        "id_AI"	INTEGER,
+	    "full_name"	VARCHAR NOT NULL,
+	    "password"	VARCHAR NOT NULL,
+	    "real_id"	VARCHAR UNIQUE NOT NULL,
+	    FOREIGN KEY("id_AI") REFERENCES "tickets"("ticket_id"),
+	    PRIMARY KEY("id_AI" AUTOINCREMENT)
+);"""
+
+tickets_table = \
+    """CREATE TABLE IF NOT EXISTS "tickets" (
+        "ticket_id"	INTEGER,
+	    "user_id"	INTEGER,
+	    "flight_id"	INTEGER,
+	    FOREIGN KEY("flight_id") REFERENCES "flights"("flight_id"),
+	    PRIMARY KEY("ticket_id" AUTOINCREMENT)
+);"""
+
+flights_table = \
+    """CREATE TABLE IF NOT EXISTS "flights" (
+        "flight_id"	INTEGER,
+	    "timestamp"	DATETIME,
+	    "remaining_seats"	INTEGER,
+	    "origin_country_id"	INTEGER,
+	    "dest_country_id"    INTEGER,
+	    FOREIGN KEY("origin_country_id") REFERENCES "countries"("code_AI"),
+	    FOREIGN KEY("dest_country_id") REFERENCES "countries"("code_AI"),
+	    PRIMARY KEY("flight_id" AUTOINCREMENT)
+);"""
+
+countries_table = \
+    """CREATE TABLE IF NOT EXISTS "countries" (
+        "code_AI"	INTEGER,
+	    "name"	VARCHAR,
+	    PRIMARY KEY("code_AI" AUTOINCREMENT)
+);"""
