@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>flight ID</th>
+        <th>time</th>
+        <th>remaining seats</th>
+        <th>origin country</th>
+        <th>destination country</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for flight in flights %}
+        <tr>
+          <td>{{ flight.flight_id }}</td>
+          <td>{{ flight.timestamp }}</td>
+          <td>{{ flight.remaining_seats }}</td>
+          <td>{{ flight.origin_country_id }}</td>
+          <td>{{ flight.dest_country_id }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <form action="http://localhost:5000/signIn" method="POST">
+        <p>ID: <input type = "text" name = "real_id" required/></p>
+        <p>password: <input type = "password" name = "password" required/></p>
+        <p><input type = "submit" value = "sign in" /></p>
+    </form>
+
+{% endblock content %}
