@@ -1,0 +1,12 @@
+---
+name: star wars
+len: 144
+is_published: true
+tags :
+  - comedy
+  - action 
+dirc: 
+ name: 
+  firstName: george 
+  lastName: lucas 
+

@@ -1,0 +1,10 @@
+{
+    "name":"star wars",
+    "len":144,
+    "is_published":true,
+    "tags":["comedy","action"],
+    "dirc":{
+        "firstName":"george",
+        "lastName":"lucas"
+    }
+}
